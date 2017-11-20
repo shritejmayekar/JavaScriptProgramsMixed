@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function add(){
+var sum = 0;
+for(var i = 0;i < arguments.length; i++)
+	sum = sum + arguments[i];
+return sum;
+}
+//console.log(add(10,10,10,10,20))
+
+function add2(a,b){
+var sum = 0;
+if(arguments.length < 2){
+	sum = sum + a || 0 ;
+	return function(c){
+    	sum = sum+c;
+    	return sum;
+    }
+}else
+{
+for(var i = 0;i < arguments.length; i++)
+	sum = sum + arguments[i];
+	return sum;
+}
+}
+var result = add2(10,101,10,20);
+console.log(result)
+</script>
+<h2>My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+</body>
+</html> 

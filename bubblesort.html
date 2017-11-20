@@ -1,0 +1,33 @@
+<!--
+
+@author Shritej
+@version 1.0
+@Since 16-11-2017
+Description: Bubble sorts the elements in an array
+-->
+<html>
+
+<head>
+  <title>Bubble sort</title>
+</head>
+
+<body>
+  <script src="bubblesortJS.js"></script>
+  <script>
+  //  function start call
+    function start() {
+      // call readArray to take inputs
+      readArray();
+      document.write("Before sorting" + "<br>");
+      //display the elements before sorting
+      show();
+      document.write("<br>After sorting" + "<br>")
+      // display element After sorting
+      bubbleSort();
+      show();
+    }
+  </script>
+  <input type="submit" onclick="start()" value="Click to Insert">
+</body>
+
+</html>

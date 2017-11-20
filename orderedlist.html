@@ -1,0 +1,50 @@
+<!--
+
+@author Shritej
+@version 1.0
+@Since 16-11-2017
+Description:ordered list sorts element when you nput in ascending oreder
+-->
+<html>
+<!--
+
+@author Shritej
+@version 1.0
+@Since 16-11-2017
+Description: ordered LinkedList to all basic operation of pop and push and insert at
+    position,etc.
+    
+-->
+
+<head>
+  <title>List</title>
+</head>
+
+<body>
+  <script src="orderedlist.js">
+  </script>
+
+  <script>
+    document.write("numbers before sorting <br>");
+    a.DisplayAll();
+
+    function start() {
+      document.write("numbers after sorting <br>")
+
+      a.bubbleSort();
+      a.DisplayAll();
+    }
+
+
+    function insert() {
+      a.AddFirst(prompt("Enter the number:"));
+      a.bubbleSort();
+      document.write("<br>orderedlist<br>")
+      a.DisplayAll();
+    }
+  </script>
+  <input type="submit" onclick="start()" value="Click me Sort">
+  <input type='submit' onclick='insert()' ' value='Clicke me insert '>
+</body>
+
+</html>

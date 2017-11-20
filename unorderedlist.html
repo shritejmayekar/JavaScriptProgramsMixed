@@ -1,0 +1,29 @@
+<!--
+
+@author Shritej
+@version 1.0
+@Since 16-11-2017
+Description: unorderedlist when element found show if not found inseert
+-->
+<html>
+
+<head>
+  <title>List</title>
+</head>
+
+<body>
+  <script src="unorderedlist.js">
+  </script>
+  <script>
+    function searchNumber() {
+      var x = prompt("Enter value to search");
+      var res = alist.search(x);
+      alert("Found:" + res);
+      alist.AddFirst(x);
+      alist.DisplayAll();
+    }
+  </script>
+  <input type="submit" onclick="searchNumber()" value="searchNumber">
+</body>
+
+</html>
