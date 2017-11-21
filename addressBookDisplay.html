@@ -1,0 +1,123 @@
+<!--
+
+@author Shritej
+@version 1.0
+@Since 16-11-2017
+Description: Display elements of AddressBookRecord
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    div.container {
+      width: 100%;
+      border: 1px solid gray;
+    }
+
+    header,
+    footer {
+      padding: 1em;
+      color: white;
+      background-color: black;
+      clear: left;
+      text-align: center;
+    }
+
+    nav {
+      float: left;
+      max-width: 160px;
+      margin: 0;
+      padding: 1em;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul a {
+      text-decoration: none;
+    }
+
+    article {
+      margin-left: 170px;
+      border-left: 1px solid gray;
+      padding: 1em;
+      overflow: hidden;
+    }
+
+    fieldset {
+      margin-left: 170px;
+      width: 550px;
+      border-left: 1px solid gray;
+      padding: 1em;
+      overflow: hidden;
+    }
+
+    button {
+      width: 70px;
+      height: 50px;
+      color: white;
+      background-color: #4CAF50;
+      align-self: flex-start;
+
+    }
+
+    button:hover {
+      background-color: #46a049;
+
+    }
+  </style>
+  <script src="addressBookRecord.js"></script>
+
+</head>
+
+<body onload="init()">
+
+  <div class="container">
+
+    <header>
+      <h1>Address Book</h1>
+    </header>
+
+    <nav>
+      <button onclick="displayRecord()">Display</button>
+      <br><br>
+      <button onclick=sortName()>Sort By Name</button>
+      <br><br>
+      <button onclick="sortZip()">Sort By Zip</button>
+      <br><br>
+      <button onclick="clearRecord()">Refresh Record</button>
+      <br><br>
+      <a href="addressBookHome.html"><button>Home</button></a>
+    </nav>
+
+    <fieldset>
+      <legend>Record Display:</legend>
+      <table id="regtable" cellspacing="5px">
+        <thead>
+          <tr>
+
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Addres</th>
+            <th>city</city>
+              <th>State</th>
+              <th>Zip</th>
+              <th>Mobile</th>
+          </tr>
+        </thead>
+        <tbody id="tablerows">
+
+        </tbody>
+      </table>
+    </fieldset>
+
+    <footer>Copyright &copy; AddressBook.com</footer>
+
+  </div>
+
+</body>
+
+</html>

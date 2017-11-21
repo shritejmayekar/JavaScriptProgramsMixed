@@ -1,0 +1,103 @@
+<!--
+
+@author Shritej
+@version 1.0
+@Since 16-11-2017
+Description: Display elements of addressBookRecord
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    div.container {
+      width: 100%;
+      border: 1px solid gray;
+    }
+
+    header,
+    footer {
+      padding: 1em;
+      color: white;
+      background-color: black;
+      clear: left;
+      text-align: center;
+    }
+
+    nav {
+      float: left;
+      max-width: 160px;
+      margin: 0;
+      padding: 1em;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul a {
+      text-decoration: none;
+    }
+
+    article {
+      margin-left: 170px;
+      border-left: 1px solid gray;
+      padding: 1em;
+      overflow: hidden;
+    }
+
+    fieldset {
+      margin-left: 170px;
+      width: 500px;
+      height: 300px;
+      border-left: 1px solid gray;
+      padding: 1em;
+      overflow: hidden;
+      align-items: center;
+    }
+    button {
+      width:70px;
+      height: 50px;
+      color: white;
+      background-color: #4CAF50;
+      align-self:  flex-start ;
+
+    }
+    button:hover {
+      background-color: #46a049;
+
+    }
+  </style>
+  <script src="addressBookRecord.js"></script>
+
+</head>
+
+<body onload="init()" >
+
+  <div class="container">
+
+    <header>
+      <h1>Address Book</h1>
+    </header>
+
+
+
+    <fieldset>
+      <legend>Menu:</legend>
+      <br><br><br><br>&emsp;&emsp;&emsp;&emsp;&emsp;
+      <a href="addressBook.html"><button id="submit">Add Person</button></a>
+      <a href="addressBookDisplay.html"> <button>Display Record</button></a>
+      <a href="addressBookUpdate.html"><button>Update Record</button></a>
+      <a href="addressBookDelete.html"><button>Delete Record</button></a>
+    </fieldset>
+
+
+
+    <footer>Copyright &copy; AddressBook.com</footer>
+
+  </div>
+
+</body>
+
+</html>
