@@ -18,29 +18,42 @@ var secondWord = prompt("Enter second word");
  */
 function isAnagram() {
   var counter = 0;
-  firstWord = firstWord.toLowerCase(firstWord.replace(/\s /g, ""));
-  secondWord = secondWord.toLowerCase(secondWord.replace(/\s /g, ""));
+  firstWord = firstWord.toLowerCase(firstWord.replace(/\s/g, ""));
+  secondWord = secondWord.toLowerCase(secondWord.replace(/\s/g, ""));
+  var firstWordCharArray = firstWord.split("");
+  var secondWordCharArray = secondWord.split("");
 
-  if (firstWord.length != secondWord.length)
+  firstWordCharArray = sortedArray(firstWordCharArray);
+  secondWordCharArray = sortedArray(secondWordCharArray);
+  if (firstWordCharArray.length != secondWordCharArray.length)
     return false;
-  else {
-    for (var i = 0; i < firstWord.length; i++) {
-      for (var j = 0; j < firstWord.length; j++) {
-        if (firstWord.charAt(i) == secondWord.charAt(j)) {
-          document.write(firstWord.charAt(i) + " " + secondWord.charAt(j) +
-            "</br>")
-          counter++;
-          //firstWord=secondWord.replace(firstWord.charAt(i),'$')
-          secondWord = secondWord.replace(secondWord.charAt(j), '#');
-        }
+
+  for (var i = 0; i < firstWordCharArray.length; i++) {
+    if (firstWordCharArray[i] != secondWordCharArray[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+/**
+ * sort the characters
+ */
+
+function sortedArray(arrayString) {
+  var tempVar;
+  for (var i = 0; i < arrayString.length; i++) {
+    for (var j = i + 1; j < arrayString.length; j++) {
+      if (arrayString[i] > arrayString[j]) {
+        tempVar = arrayString[i];
+        arrayString[i] = arrayString[j];
+        arrayString[j] = tempVar;
       }
     }
   }
-  document.write(counter);
-  if (counter == firstWord.length)
-    return true;
-  else
-    return false;
+  for (var i = 0; i < arrayString.length; i++) {
+    console.log(arrayString[i]);
+  }
+  return arrayString;
 }
 //call angram function
 var result = isAnagram();
